@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 :root {
-    --light-color: #BBBBBB;
+    --light-color: rgb(236, 236, 236);
     --dark-color: rgb(59, 59, 59);
 }
 
@@ -454,4 +454,147 @@ footer {
 
 footer a {
     color: var(--light-color);
+}
+
+
+
+
+
+/* ----------------------------- */
+/*          Mobile Version       */
+/* ----------------------------- */
+
+@media only screen and (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    #toggle_menu {
+        margin: 10px;
+    }
+
+    #toggle_menu i {
+        color: var(--light-color);
+        font-size: 1.5rem;
+    }
+
+    .close {
+        display: none;
+        z-index: 1;
+    }
+
+    nav ul {
+        font-size: 1.2rem;
+        color: var(--light-color);
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        background: rgba(0, 0, 0, 0.75);
+        top: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    nav ul li {
+        margin-bottom: 10%;
+    }
+
+    .header_img {
+        width: 55%;
+        height: 65%;
+    }
+
+    #dot_nav {
+        display: none;
+    }
+
+    #about .section_wrap {
+        display: grid;
+    }
+
+    #about img {
+        position: initial;
+        grid-row: 3;
+        margin-top: 10px;
+    }
+
+    #about a {
+        margin: 0 auto;
+    }
+
+    #about p {
+        text-align: center;
+        width: 100%;
+        font-size: 1rem;
+        grid-row: 2;
+    }
+
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        margin-top: 15px;
+        width: 80%;
+        height: 80vw;
+        font-size: 1rem;
+    }
+
+    .project:hover {
+        width: 80%;
+        transition: none;
+    }
+
+    .project-info {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .socials {
+        width: 100%;
+    }
+
+    .socials div {
+        height: 5vh;
+    }
+
+    form {
+        display: grid;
+        position: relative;
+    }
+
+    input {
+        height: 3vh;
+    }
+
+    textarea {
+        height: 25vh;
+    }
+
+    input[type='submit'],
+    input[type='button'] {
+        position: absolute;
+        bottom: -16%;
+        height: 10% !important;
+        width: 48%;
+        text-align: center;
+    }
+
+    input[type='button'] {
+        right: 0;
+    }
 }
