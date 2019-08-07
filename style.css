@@ -1,9 +1,16 @@
 /* GLOBAL */
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    font-display: swap;
+}
+
 :root {
-    --light-color: rgb(236, 236, 236);
+    --light-color: #ececec;
     --dark-color: rgb(59, 59, 59);
+    --header-light-color: rgb(150, 149, 149);
 }
 
 html {
@@ -11,6 +18,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-display: fallback;
     color: #888888;
+    background: #2E2E2E;
 }
 
 * {
@@ -82,7 +90,9 @@ textarea {
 }
 
 input,
-textarea {
+textarea,
+.submit,
+.cancel {
     padding: 10px;
     margin: 0 0.5vw 1vw;
     border-radius: 8px;
@@ -90,20 +100,21 @@ textarea {
     font-size: 0.7rem;
 }
 
-input[type='submit'] {
+.submit {
     background: #23846A;
 }
 
-input[type='button'] {
+.cancel {
     background: #953A3A;
-    width: 20vw;
+
 }
 
-input[type='submit'],
-input[type='button'] {
+.submit,
+.cancel {
+    padding: 0 10px;
     color: #fff;
     text-align: start;
-    height: 4vw !important;
+    height: 5vw !important;
 }
 
 
@@ -170,12 +181,15 @@ header nav li {
     text-transform: capitalize;
 }
 
+#toggle_menu {
+    display: none;
+}
+
 .header_content {
     grid-row: 2;
     background-color: whitesmoke;
     display: flex;
     position: relative;
-    z-index: 2;
 }
 
 .header_img {
@@ -206,16 +220,19 @@ header nav li {
 
 .header_text::before {
     content: "Hi I'm";
-    color: var(--light-color);
+    color: var(--header-light-color);
 }
 
 .header_text::after {
     content: "a full-stack web developer";
-    color: var(--light-color);
+    color: var(--header-light-color);
     float: right;
 }
 
 /* About Page */
+#about {
+    background: #fff;
+}
 
 #about .section_wrap {
     position: relative;
@@ -320,7 +337,7 @@ header nav li {
     transition: ease 600ms;
 }
 
-.project-info span {
+.links {
     margin-top: 10px;
 }
 
@@ -380,10 +397,11 @@ header nav li {
     margin-bottom: 3.5vw;
 }
 
-.front div,
-.back div {
+.front ul,
+.back ul {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 #skills li {
@@ -403,11 +421,11 @@ header nav li {
 }
 
 #skills .back li:hover {
-    background: #215732;
+    background: #953A3A;
 }
 
 #skills li:hover {
-    margin-left: 10px;
+    transform: translateX(4px);
     background: #85c099;
     transition: ease 200ms;
 }
@@ -445,11 +463,30 @@ footer {
     background: #0077b5;
 }
 
+
+.status {
+    width: 100%;
+    min-height: 55px;
+    background: rgb(255, 187, 0);
+    position: fixed;
+    z-index: 9999;
+    color: #fff;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.7em;
+}
+
+
 /* Footer */
 footer {
+    color: #c4c4c4;
     text-align: center;
     font-size: 0.6rem;
     padding: 10px;
+    bottom: 0;
+    margin-top: 10%;
+    z-index: -1;
 }
 
 footer a {
@@ -469,7 +506,7 @@ footer a {
     html,
     body {
         width: 100%;
-        font-size: 18px;
+        font-size: 25px;
     }
 
     nav {
@@ -477,6 +514,7 @@ footer a {
     }
 
     #toggle_menu {
+        display: block;
         margin: 10px;
     }
 
@@ -563,6 +601,11 @@ footer a {
         height: 100%;
     }
 
+    .links {
+        padding-top: 10%;
+        font-size: 2em;
+    }
+
 
     .socials {
         width: 100%;
@@ -570,6 +613,7 @@ footer a {
 
     .socials div {
         height: 5vh;
+        min-height: 48px;
     }
 
     form {
@@ -579,22 +623,26 @@ footer a {
 
     input {
         height: 3vh;
+        min-height: 48px;
+        min-width: 48px;
     }
 
     textarea {
         height: 25vh;
     }
 
-    input[type='submit'],
-    input[type='button'] {
+    .submit,
+    .cancel {
         position: absolute;
         bottom: -16%;
         height: 10% !important;
+        min-height: 48px;
+        min-width: 48px;
         width: 48%;
         text-align: center;
     }
 
-    input[type='button'] {
+    .cancel {
         right: 0;
     }
 }

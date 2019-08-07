@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Abraham is a artist web developer. If your looking for someone to build a professional modern website, look no further.">
+    <meta name="author" content="Abraham D.Ndinga">
+    <meta name="keywords"
+        content="website developer,web, developer, designer, HTML,CSS,JavaScript, Abraham, D.Ndinga, Ndinga, Abraham Dieudonne Ndinga, Abraham Ndinga">
     <title>Abraham's Portfolio</title>
 
     <link rel="icon" type="image/png" sizes="16x16" href="resources//favicon-16x16.png">
@@ -13,6 +18,7 @@
 </head>
 
 <body>
+    <div class="status"></div>
     <header id="home">
         <nav>
             <div id="toggle_menu">
@@ -99,11 +105,11 @@
                             <li>MongoDB</li>
                         </span>
                         <span class="links">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/AbrahamDN/todolist" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
 
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://my-todoapp-2019.herokuapp.com/" target="_blank" rel="noopener noreferrer">
                                 <i class="far fa-eye"></i>
                             </a>
                         </span>
@@ -121,11 +127,11 @@
                             <li>BootStrap</li>
                         </span>
                         <span class="links">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/AbrahamDN/Books" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
 
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://abrahamdn.github.io/Books/" target="_blank" rel="noopener noreferrer">
                                 <i class="far fa-eye"></i>
                             </a>
                         </span>
@@ -143,11 +149,13 @@
                             <li>AJAX</li>
                         </span>
                         <span class="links">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/AbrahamDN/Simpol-Search" target="_blank"
+                                rel="noopener noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
 
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://abrahamdn.github.io/Simpol-Search/" target="_blank"
+                                rel="noopener noreferrer">
                                 <i class="far fa-eye"></i>
                             </a>
                         </span>
@@ -161,24 +169,24 @@
             <div id="skills">
                 <div class="front">
                     <h3>Front End</h3>
-                    <div>
+                    <ul>
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>JavaScript (ES6)</li>
                         <li>BootStrap</li>
                         <li>SaSS</li>
                         <li>EJS</li>
-                    </div>
+                    </ul>
                 </div>
                 <div class="back">
                     <h3>Back End</h3>
-                    <div>
+                    <ul>
                         <li>MongoDB</li>
                         <li>NodeJS</li>
                         <li>Express</li>
-                    </div>
                 </div>
             </div>
+        </div>
 
         </div>
     </section>
@@ -191,17 +199,17 @@
             <div class="wrap">
                 <div class="socials">
                     <div>
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/AbrahamDN" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
                     <div>
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-envelope"></i>
+                        <a href="#contact-form">
+                            <i class=" fas fa-envelope"></i>
                         </a>
                     </div>
                     <div>
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/abrahamdn/" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
@@ -209,18 +217,25 @@
                 <br>
                 <b>Contact me here</b>
                 <br>
-                <form>
+                <form id="contact-form" action="https://formspree.io/ad.ndinga@gmail.com" method="POST">
                     <label>
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="text" placeholder="Subject" required>
-                        <input type="submit" value="Submit">
+                        <input type="text" name="name" class="name" placeholder="Name" required>
+                        <input type="email" name="email" class="email" placeholder="Email" required>
+                        <input type="text" name="subject" class="subject" placeholder="Subject" required>
+
+                        <button class="submit">
+                            Submit
+                        </button>
                     </label>
                     <label>
-                        <textarea placeholder="Message" minlength="3"></textarea>
-                        <input type="button" value="Cancel">
+                        <textarea name="message" placeholder="Message" class="message"></textarea>
+
+                        <button class="cancel">
+                            Cancel
+                        </button>
                     </label>
                 </form>
+
             </div>
         </div>
     </section>
@@ -242,11 +257,11 @@
 
     <footer>
         &copy; 2019 All rights reserved |
-        Made by <a href="http://" target="_blank">
+        Made by <a href="https://github.com/AbrahamDN" target="_blank">
             Abraham D.Ndinga</a>
     </footer>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 
