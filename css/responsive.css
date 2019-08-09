@@ -1,0 +1,161 @@
+/* ------------------------------------ */
+/*          Responsive Version(s)       */
+/* ------------------------------------ */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tablet */
+
+@media only screen and (max-width: 885px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .burgerMenu,
+    .burgerMenu::before,
+    .burgerMenu::after,
+    .burgerMenuClose,
+    .burgerMenuClose::before {
+        height: 6px;
+        background: var(--bg-gradient);
+        border-radius: 100px;
+        position: absolute;
+        z-index: 2;
+        transition: ease-in 250ms;
+        cursor: pointer;
+    }
+
+    .burgerMenu,
+    .burgerMenuClose {
+        width: 50px;
+        right: 5%;
+    }
+
+    .burgerMenu {
+        margin-top: -4%;
+    }
+
+    .burgerMenu::before {
+        content: '';
+        width: 80%;
+        margin-top: 18px;
+        right: 0;
+    }
+
+    .burgerMenu::after {
+        content: '';
+        width: 100%;
+        margin-top: 36px;
+        right: 0;
+    }
+
+
+    .burgerMenuClose {
+        margin-top: -1%;
+        margin-left: 5%;
+        background: var(--bg-gradient);
+        transform: rotate(45deg);
+        position: fixed;
+    }
+
+
+    .burgerMenuClose::before {
+        content: '';
+        width: 100%;
+        top: -16px;
+        right: 0px;
+        transform: rotate(90deg);
+    }
+
+    .burgerMenuClose.burgerMenu::after {
+        width: 0%;
+        opacity: 0;
+    }
+
+
+    .mobile-nav,
+    .mobile-nav li,
+    .mobile-nav .cta {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        top: 0;
+        left: 0;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 4;
+        z-index: 1;
+        animation: fade 500ms;
+    }
+
+    .mobile-nav .cta {
+        text-align: center;
+        width: 35%;
+        height: 8vmin;
+        padding: 0 2% 5vmin;
+        align-items: center !important;
+    }
+
+
+
+    .projects {
+        grid-template-areas:
+            'a b'
+            'c c';
+
+    }
+
+    textarea {
+        height: 90%;
+    }
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 700px) {
+
+    .global_spacing {
+        padding: 10%;
+    }
+
+
+    .header-content {
+        padding: 20vh 10%;
+    }
+
+    #about img {
+        width: 20%;
+    }
+
+    .projects,
+    form {
+        grid-template-areas: 'a''b''c';
+    }
+
+    .projects {
+        margin-top: 10%;
+    }
+
+    textarea {
+        height: 30vh;
+    }
+}

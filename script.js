@@ -1,48 +1,94 @@
-const burgerMenu = document.querySelector('.burger');
-const burgerMenuClose = document.querySelector('.close');
-const navLinks = document.querySelector('nav ul');
-const emailBtn = document.querySelector('#email');
+const navLists = document.querySelector('nav ul');
+const burgerMenuWrap = document.querySelector('.burgerMenuWrap div');
+const burgerMenuClose = document.querySelector('.burgerMenuClose');
+const homePage = document.querySelector('#home');
+const aboutPage = document.querySelector('#about');
+const portfolioPage = document.querySelector('#portfolio');
+const contactPage = document.querySelector('#contact');
+const homeClass = document.querySelector('.homePage');
+const aboutClass = document.querySelector('.aboutPage');
+const portfolioClass = document.querySelector('.portfolioPage');
+const contactClass = document.querySelector('.contactPage');
 
-const name = document.querySelector('.name').value;
-const email = document.querySelector('.email').value;
-const subject = document.querySelector('.subject').value;
-const message = document.querySelector('.message').value;
-const statusElm = document.querySelector('.status');
 
 
-burgerMenu.onclick = () => {
-    burgerMenu.style.display = 'none';
-    navLinks.style.display = 'flex';
-    navLinks.style.zIndex = '-1';
-    burgerMenuClose.style.display = 'block';
-};
+function MenuToggle(parentElement, domElement) {
+    parentElement.classList.toggle(domElement);
+}
 
-burgerMenuClose.onclick = () => {
-    burgerMenuClose.style.display = 'none';
-    navLinks.style.display = 'none';
-    navLinks.style.zIndex = '0';
-    burgerMenu.style.display = 'block';
-};
+function MenuClose() {
+    for (const value of burgerMenuWrap.classList) {
+        if (value === 'burgerMenuClose')
+            navLists.classList.add('mobile-nav');
+        else
+            navLists.classList.remove('mobile-nav');
 
-// Contact Form
-document.querySelector('.submit').addEventListener('click', (event) => {
-    function invalidForm(msg) {
-        statusElm.style.display = 'flex';
-        event.preventDefault();
-        statusElm.innerHTML = '*Invalid form: fill in all the form inputs*';
+    }
+}
+
+
+function smoothScroll(target, duration) {
+    let targets = aboutPage;
+    let targetPosition = target.getBoundingClientRect().top;
+    let startPosition = window.pageYOffset;
+    let distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        let timeElapsed = currentTime - startTime;
+        let run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
     }
 
-    if (!(name.length >= 3) && !(typeof name === 'string')) invalidForm();
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    };
 
-    if (!(email.length >= 5) && !(email.includes('@')) && !(email.includes('.'))) invalidForm();
 
-    if (!(subject.length >= 3)) invalidForm();
+    requestAnimationFrame(animation);
 
-    if (!(message.length >= 12)) invalidForm();
+}
 
+function applySmoothScroll(eventTarget, scrollToTarget) {
+    eventTarget.addEventListener('click', () => {
+        smoothScroll(scrollToTarget, 500);
+    });
+}
+
+applySmoothScroll(homeClass, homePage);
+applySmoothScroll(aboutClass, aboutPage);
+applySmoothScroll(portfolioClass, portfolioPage);
+applySmoothScroll(contactClass, contactPage);
+
+
+burgerMenuWrap.addEventListener('click', () => {
+    MenuToggle(burgerMenuWrap, 'burgerMenuClose');
+    MenuClose();
 });
 
-statusElm.onclick = () => {
-    statusElm.style.opacity = '0';
-    statusElm.style.zIndex = '-1';
+
+function markPage() {
+
+    window.addEventListener('scroll', () => {
+        console.log(window.scrollY);
+        if (window.scrollY <= 580) homeClass.style.color = 'orange';
+        else homeClass.style.color = 'inherit';
+
+        if (window.scrollY >= 580 && window.scrollY <= 1200) aboutClass.style.color = 'orange';
+        else aboutClass.style.color = 'inherit';
+
+        if (window.scrollY >= 1200 && window.scrollY <= 3000) portfolioClass.style.color = 'orange';
+        else portfolioClass.style.color = 'inherit';
+
+        if (window.scrollY >= 3000 && window.scrollY <= 3800) contactClass.style.color = 'orange';
+        else contactClass.style.color = 'inherit';
+    });
 }
+
+
+window.onload = markPage();
