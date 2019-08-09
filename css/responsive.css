@@ -37,7 +37,7 @@
     .burgerMenu,
     .burgerMenuClose {
         width: 50px;
-        right: 5%;
+        right: 6%;
     }
 
     .burgerMenu {
@@ -144,6 +144,11 @@
 
     #about img {
         width: 20%;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10vmin;
     }
 
     .projects,

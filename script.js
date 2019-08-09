@@ -27,45 +27,6 @@ function MenuClose() {
 }
 
 
-function smoothScroll(target, duration) {
-    let targets = aboutPage;
-    let targetPosition = target.getBoundingClientRect().top;
-    let startPosition = window.pageYOffset;
-    let distance = targetPosition - startPosition;
-    let startTime = null;
-
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        let timeElapsed = currentTime - startTime;
-        let run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-    }
-
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-    };
-
-
-    requestAnimationFrame(animation);
-
-}
-
-function applySmoothScroll(eventTarget, scrollToTarget) {
-    eventTarget.addEventListener('click', () => {
-        smoothScroll(scrollToTarget, 500);
-    });
-}
-
-applySmoothScroll(homeClass, homePage);
-applySmoothScroll(aboutClass, aboutPage);
-applySmoothScroll(portfolioClass, portfolioPage);
-applySmoothScroll(contactClass, contactPage);
-
-
 burgerMenuWrap.addEventListener('click', () => {
     MenuToggle(burgerMenuWrap, 'burgerMenuClose');
     MenuClose();
@@ -85,7 +46,7 @@ function markPage() {
         if (window.scrollY >= 1200 && window.scrollY <= 3000) portfolioClass.style.color = 'orange';
         else portfolioClass.style.color = 'inherit';
 
-        if (window.scrollY >= 3000 && window.scrollY <= 3800) contactClass.style.color = 'orange';
+        if (window.scrollY >= 3000 && window.scrollY <= 5000) contactClass.style.color = 'orange';
         else contactClass.style.color = 'inherit';
     });
 }

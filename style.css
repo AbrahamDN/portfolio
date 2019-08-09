@@ -384,37 +384,32 @@ footer a,
 }
 
 .socials {
-    width: 100%;
-    margin: 10vmin;
-    margin-left: 0;
-    display: inline-block;
-    justify-content: space-between;
-    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+    width: 80%;
+    margin: auto;
+    margin: 5% auto;
 }
 
-.socials i {
-    width: 20%;
-    padding: 3vmin;
+.social {
     background: grey;
     border-radius: 100px;
-    color: #fff;
-    text-align: center;
+    padding: 5%;
 }
 
-
-.socials li {
-    display: inline;
-    word-spacing: 10px;
+.social img {
+    width: 40px;
 }
 
-.socials li:nth-child(1) i {
+.socials a:nth-child(1) .social {
     background: rgb(110, 84, 148);
 }
 
-.socials li:nth-child(2) i {
+.socials a:nth-child(2) .social {
     background: rgb(221, 75, 57);
 }
 
-.socials li:nth-child(3) i {
+.socials a:nth-child(3) .social {
     background: rgb(0, 119, 181);
 }
