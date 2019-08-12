@@ -36,7 +36,6 @@ burgerMenuWrap.addEventListener('click', () => {
 function markPage() {
 
     window.addEventListener('scroll', () => {
-        console.log(window.scrollY);
         if (window.scrollY <= 580) homeClass.style.color = 'orange';
         else homeClass.style.color = 'inherit';
 

@@ -129,6 +129,19 @@ header nav li:nth-child(2) {
     padding: 0 5%;
 }
 
+header::after {
+    content: '';
+    width: 45%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    margin-left: -5%;
+    margin-top: -10%;
+    background: url('resources/blub.svg') no-repeat;
+    background-size: contain;
+    z-index: -4;
+}
+
 
 .header-content {
     padding: 7% 10%;
@@ -173,6 +186,22 @@ header nav li:nth-child(2) {
 
 #about img {
     width: 10%;
+}
+
+#about.global_spacing {
+    margin: auto 15%;
+}
+
+#about::after {
+    content: '';
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    right: -10%;
+    margin-top: -25%;
+    background: url('resources/blub2.svg') no-repeat;
+    background-size: contain;
+    z-index: -4;
 }
 
 /* Portfolio page */
@@ -239,9 +268,9 @@ header nav li:nth-child(2) {
     letter-spacing: 3px;
 }
 
+
 .prj-tags ul {
     color: rgba(0, 0, 0, 0.8);
-    font-size: 0.85em;
     line-height: 2;
     padding: 5%;
     cursor: default;
@@ -252,12 +281,14 @@ header nav li:nth-child(2) {
 }
 
 .link {
+    color: var(--theme-color2);
+}
+
+.link:hover,
+#about p a:hover {
     color: var(--theme-color);
 }
 
-.link:hover {
-    color: var(--theme-color2);
-}
 
 /* Skills section */
 
@@ -309,6 +340,7 @@ textarea {
     padding: 3% 10px;
     height: 7vmin;
     border: 1px solid rgb(180, 180, 180);
+    font-size: 0.8rem;
 }
 
 textarea {
@@ -323,7 +355,7 @@ button {
     border: none;
     font-size: 0.8rem;
     text-transform: capitalize;
-    color: #fff;
+    color: #000;
     cursor: pointer;
 }
 
@@ -331,12 +363,8 @@ button {
     background: var(--theme-color2);
 }
 
-.submitBtn:hover {
-    background: var(--bg-gradient);
-}
-
 .cancelBtn {
-    background: rgb(180, 180, 180);
+    background: var(--theme-color);
 }
 
 
@@ -376,6 +404,9 @@ footer {
     font-size: 2.5vmin;
     text-align: center;
     padding: 20px;
+    background: rgb(26, 26, 26);
+    color: #fff;
+    margin-top: 10%;
 }
 
 footer a,
@@ -399,7 +430,9 @@ footer a,
 }
 
 .social img {
-    width: 40px;
+    width: 5vw;
+    max-width: 40px;
+    min-width: 28px;
 }
 
 .socials a:nth-child(1) .social {

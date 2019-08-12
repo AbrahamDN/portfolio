@@ -126,6 +126,10 @@
     textarea {
         height: 90%;
     }
+
+    #about.global_spacing {
+        margin: auto;
+    }
 }
 
 
@@ -143,7 +147,8 @@
     }
 
     #about img {
-        width: 20%;
+        width: 30%;
+        margin-top: 10%;
     }
 
     .skills {
