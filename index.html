@@ -5,305 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description"
-        content="Abraham is a artist web developer. If your looking for someone to build a professional modern website, look no further.">
-    <meta name="author" content="Abraham D.Ndinga">
-    <meta name="keywords"
-        content="website developer,web, developer, designer, HTML,CSS,JavaScript, Abraham, D.Ndinga, Ndinga, Abraham Dieudonne Ndinga, Abraham Ndinga">
-    <title>Abraham's Portfolio</title>
+    <title>AbrahamDN Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/fav/favicon-16x16.png">
+    <link rel="manifest" href="./img/fav/site.webmanifest">
+    <link rel="mask-icon" href="./img/fav/safari-pinned-tab.svg" color="#eb5757">
+    <link rel="shortcut icon" href="./img/fav/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./img/fav/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="resources//favicon-16x16.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body>
+<body class="layout">
 
-    <div id="dot_nav">
-        <a href="#home" class="homePage">•</a>
-        <a href="#about" class="aboutPage">•</a>
-        <a href="#portfolio" class="portfolioPage">•</a>
-        <a href="#contact" class="contactPage">•</a>
-    </div>
+    <nav class="gbl-space">
+        <a href="/" class="logo">
+            <img src="./img/logo.svg" alt="logo">
+            <h3>AbrahamDN</h3>
+        </a>
+        <span class="nav-links">
+            <div class="mobile-menu">
+                <div class="mobile-links"></div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#about">About-Me</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="/">Blog</a>
+                </li>
+                <li>
+                    <a href="contact">
+                        <button>
+                            Contact Me
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </span>
+    </nav>
 
-    <header id="home" class="global_spacing">
-        <nav>
+
+    <header class="gbl-space2">
+        <div>
+            <img src="./img/avatar.svg" alt="Abraham Dieudonne Ndinga">
+        </div>
+        <div>
+            <h2>Hi, I'm</h2>
+            <h1>Abraham D Ndinga</h1>
+            <h2>Web Developer & Designer</h2>
             <div>
-                <a href="#home">
-                    <img src="resources/logo.svg" alt="logo">
+                <a href="#contact">
+                    <button>
+                        Get in touch!
+                    </button>
                 </a>
+                <br>
+                <span>
+                    <a href="https://github.com/AbrahamDN" target="_blank" rel="noopener noreferrer">
+                        <img src="./img/github.svg" alt="GitHub">
+                    </a>
+                    <a href="https://uk.linkedin.com/in/abrahamdn" target="_blank" rel="noopener noreferrer">
+                        <img src="./img/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://twitter.com/Abraham_DN" target="_blank" rel="noopener noreferrer">
+                        <img src="./img/twitter.svg" alt="Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/iabraham.dn/" target="_blank" rel="noopener noreferrer">
+                        <img src="./img/instagram.svg" alt="Instagram">
+                    </a>
+                </span>
             </div>
-            <div>
-                <div class="burgerMenuWrap">
-                    <div class="burgerMenu"></div>
-                </div>
-                <ul>
-                    <li>
-                        <a href="#about">About Me</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="cta">
-                        <a href="#contact">Contact Me</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-
-        <div class="header-content">
-            <h1>Abraham D.Ndinga</h1>
-            <br><br>
-            <a class='cta' href="#contact">
-                Get In Touch!
-            </a>
         </div>
     </header>
 
 
-    <section id="about" class="global_spacing">
-        <h1>About Me</h1>
-        <p>
-            Professional and Artistic. I build modern websites that look good and perform well.
-            <br><br>
-            I'm proficient CSS & JavaScript, and for the backend I prefer NodeJS & NoSQL databases like MongoDB, but I
-            am familiar with SQL(s).
-            <br><br>
-            <a href="#contact">Contact me</a> to find out more.
-        </p>
-        <div>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <img src="resources/cv_icon.svg" alt="Download CV">
-            </a>
-        </div>
-    </section>
-
-
-    <section id="portfolio" class="global_spacing">
-        <h1>Projects</h1>
-        <div class="projects">
-            <!-- Project 1 -->
-            <div class="project">
-                <a href="https://my-todoapp-2019.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                    <div class="prj-img prj-1">
-                    </div>
-                </a>
-
-                <div class="prj-desc">
-                    <h3>To-do-List</h3>
-                    <br>
-                    <p>
-                        Manage your time effectively by noting your daily, weekly or even yearly assignments. You can
-                        create your own private list or see what others have got to do in the default public list.
-                    </p>
-                    <div class="prj-tags">
-                        <ul>
-                            <li>
-                                <a href="#skills">HTML</a>
-                            </li>
-                            <li>
-                                <a href="#skills">CSS</a>
-                            </li>
-                            <li>
-                                <a href="#skills">JS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#skills">NodeJS</a>
-                            </li>
-                            <li>
-                                <a href="#skills">MongoDB</a>
-                            </li>
-                        </ul>
-                        <a class="link" href="https://github.com/AbrahamDN/todolist" target="_blank"
-                            rel="noopener noreferrer">
-                            Github
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project">
-                <a href="https://abrahamdn.github.io/Simpol-Search/" target="_blank" rel="noopener noreferrer">
-                    <div class="prj-img prj-2">
-                    </div>
-                </a>
-
-                <div class="prj-desc">
-                    <h3>Simpol Search</h3>
-                    <br>
-                    <p>
-                        Need information? Wikipedia has one of the worlds largest information database. Simpol search
-                        makes searching for what you need easy, with its clear & simple user interface.
-                    </p>
-                    <div class="prj-tags">
-                        <ul>
-                            <li>
-                                <a href="#skills">HTML</a>
-                            </li>
-                            <li>
-                                <a href="#skills">CSS</a>
-                            </li>
-                            <li>
-                                <a href="#skills">JS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#skills">AJAX</a>
-                            </li>
-                            <li>
-                                <a href="#skills">Wikipedia API</a>
-                            </li>
-                        </ul>
-                        <a class="link" href="https://github.com/AbrahamDN/Simpol-Search" target="_blank"
-                            rel="noopener noreferrer">
-                            Github
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project">
-                <a href="https://abrahamdn.github.io/Books/" target="_blank" rel="noopener noreferrer">
-                    <div class="prj-img prj-3">
-                    </div>
-                </a>
-
-                <div class="prj-desc">
-                    <h3>Books Publishing</h3>
-                    <br>
-                    <p>
-                        This is a mythological book publishing site. It's a beautiful template built with BootStrap,
-                        built to be professional & engaging.
-                    </p>
-                    <div class="prj-tags">
-                        <ul>
-                            <li>
-                                <a href="#skills">HTML</a>
-                            </li>
-                            <li>
-                                <a href="#skills">CSS</a>
-                            </li>
-                            <li>
-                                <a href="#skills">JS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#skills">BootStrap</a>
-                            </li>
-                        </ul>
-                        <a class="link" href="https://github.com/AbrahamDN/Books" target="_blank"
-                            rel="noopener noreferrer">
-                            Github
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <br>
-        <hr>
-
-        <section id="skills">
-            <h2>Skills / TOOLS</h2>
-
-            <div class="skills">
-                <div class="frontEnd">
-                    <div>
-                        <h3>Front End</h3>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>BootStrap</li>
-                            <li>SaSS</li>
-                            <li>Web Design</li>
-                            <li>Graphic Design</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="backEnd">
-                    <h3>Back End</h3>
-                    <ul>
-                        <li>MongoDB</li>
-                        <li>NodeJS</li>
-                        <li>Express</li>
-                        <li>NPM</li>
-                        <li>Git</li>
-                        <li>Passport.js</li>
-                        <li>Authentication & Security</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    </section>
-
-
-    <section id="contact" class="global_spacing">
-        <h1>Get In Touch</h1>
-        <div class="contact-form">
-            <form action="https://formspree.io/ad.ndinga@gmail.com" method="post">
-                <label>
-
-                    <input aria-label="name" type="text" name="name" placeholder="Name">
-
-                    <input aria-label="email" type="email" name="email" placeholder="Email">
-
-                    <input aria-label="subject" type="text" name="subject" placeholder="Subject">
-
-                </label>
-                <label for="message">
-                    <textarea aria-label="message" name="message" placeholder="Message"></textarea>
-                </label>
-                <label class="btnLabel">
-                    <button class="submitBtn" type="submit">Submit</button>
-                    <button class="cancelBtn" type="reset">Cancel</button>
-                </label>
-            </form>
-        </div>
-
-
-    </section>
-
-
-    <footer>
-        <div class="socials">
-            <a href="https://github.com/AbrahamDN" aria-label="github" target="_blank" rel="noopener noreferrer">
-                <div class="social">
-                    <img src="resources/github-logo.svg" alt="GitHub">
-                </div>
-            </a>
-
-            <a href="mailto:ad.ndinga@gmail.com" aria-label="email">
-                <div class="social">
-                    <img src="resources/envelope.svg" alt="Email">
-                </div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/abrahamdn/" aria-label="likedIn" target="_blank"
-                rel="noopener noreferrer">
-                <div class="social">
-                    <img src="resources/linkedin.svg" alt="LinkedIn">
-                </div>
-            </a>
-        </div>
-
-        &copy; Designed & Built by <a href="https://github.com/AbrahamDN" aria-label="github" target="_blank"
-            rel="noopener noreferrer">
-            Abraham D.Ndinga</a>
-    </footer>
-
-
-    <script src="script.js"></script>
+    <!-- Script -->
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
