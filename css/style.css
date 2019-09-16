@@ -337,11 +337,22 @@ summary::-webkit-details-marker {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     align-items: center;
+    padding: 10% 0;
+}
+
+.project:nth-child(2) .prj-content {
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .prj-img {
     display: flex;
     justify-content: flex-end;
+}
+
+.project:nth-child(2) .prj-img {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .prj-img img {
@@ -355,7 +366,8 @@ summary::-webkit-details-marker {
 
 .prj-img span::before {
     content: '';
-    background: url('../img//project1-blob.svg') no-repeat;
+    background: url('../img//project1-blob.svg');
+    background-repeat: no-repeat;
     position: absolute;
     background-position: center;
     background-size: contain;
@@ -366,9 +378,28 @@ summary::-webkit-details-marker {
     z-index: -1;
 }
 
+.project:nth-child(2) .prj-img span::before {
+    background-image: url('../img/project2-blob.svg');
+    top: -25%;
+    right: -20%;
+    left: auto;
+    width: 40vmin;
+    height: 40vmin;
+}
+
+.project:nth-child(3) .prj-img span::before {
+    background-image: url('../img/project3-blob.svg');
+    top: 25%;
+    left: -30%;
+    width: 40vmin;
+    height: 40vmin;
+}
+
 .prj-tech ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow: wrap;
     font-size: 0.9em;
 }
 
@@ -385,8 +416,10 @@ summary::-webkit-details-marker {
     filter: drop-shadow(0px 6.5px 0px #000);
     padding: 10px;
     justify-content: baseline;
+    margin: 10px 0;
     margin-left: 20px;
 }
+
 
 .prj-tech button:hover {
     filter: drop-shadow(0px 6.5px 0px #000);
@@ -408,4 +441,26 @@ summary::-webkit-details-marker {
 
 .prj-content-ft img {
     filter: brightness(0);
+}
+
+
+.projects>span a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.projects>span a:hover {
+    opacity: 1;
+}
+
+.projects>span img {
+    padding-left: 10px;
+    filter: brightness(0);
+    transition: filter 0.3s;
+}
+
+.projects>span img:hover {
+    filter: brightness(1);
 }

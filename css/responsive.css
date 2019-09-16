@@ -121,9 +121,28 @@
         grid-template-columns: 1fr;
     }
 
+    .project:nth-child(2) .prj-content {
+        grid-column: initial;
+        grid-row: initial;
+    }
+
     .prj-img {
         display: flex;
         justify-content: center;
+    }
+
+    .prj-img span::before {
+        display: none;
+    }
+
+    .prj-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prj-tech button {
+        margin: 10px 5px;
     }
 }
 
@@ -156,21 +175,5 @@
     #about,
     #projects {
         text-align: center;
-    }
-
-
-    .prj-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .prj-tech ul {
-        justify-content: space-evenly;
-        flex-flow: wrap;
-    }
-
-    .prj-tech button {
-        margin: 10px 5px;
     }
 }
