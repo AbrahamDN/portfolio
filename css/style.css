@@ -1,4 +1,4 @@
-/* Global */
+/* GLOBAL */
 @font-face {
     font-family: 'Rubik';
     font-display: swap;
@@ -33,6 +33,7 @@ body {
 body {
     font-family: Rubik, sans-serif;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 h1,
@@ -46,15 +47,19 @@ h6 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4em;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 3em;
 }
 
 h2~div {
     margin-top: 5em;
+}
+
+h3 {
+    font-size: 2em;
 }
 
 a {
@@ -71,6 +76,10 @@ li a:hover {
     color: var(--secondary-colour);
 }
 
+ul {
+    padding: 0;
+}
+
 button {
     border: none;
     padding: 10px 25px;
@@ -83,7 +92,7 @@ button {
     text-transform: capitalize;
     outline: none;
     cursor: pointer;
-    transition: all 0.25s linear;
+    transition: all 0.2s linear;
 }
 
 button:hover {
@@ -108,17 +117,22 @@ button:hover {
 
 .gbl-space2 {
     grid-column: 6/31;
-    padding-top: 20px;
+    padding-top: 10%;
+    padding-bottom: 1em;
     width: 100%;
 }
 
 
 nav,
-.logo {
+.logo,
+.prj-tech button,
+.prj-content-ft,
+.prj-content-ft span a {
     display: flex;
     justify-items: center;
     align-items: center;
 }
+
 
 nav,
 .logo {
@@ -129,6 +143,7 @@ nav,
 /* Homepage */
 
 nav {
+    background: #fff;
     justify-content: space-between;
     word-spacing: 1.25em;
     position: relative;
@@ -139,6 +154,258 @@ nav {
     padding-right: 10px;
 }
 
+.logo h3 {
+    font-size: 1.4em;
+}
+
 .mobile-menu {
     display: none;
+}
+
+/* Header */
+
+header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+header h2 {
+    font-size: 2.5em;
+}
+
+header div:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+header div:nth-child(1) img {
+    margin-top: -3em;
+    width: 100%;
+}
+
+header div:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+}
+
+header div:nth-child(2)>div {
+    padding-left: 40px;
+    margin-top: 40px;
+    position: relative;
+}
+
+header div:nth-child(2)>div::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 80vh;
+    border-radius: 40px;
+    background: var(--primary-colour);
+}
+
+header div:nth-child(2)>div>div {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+header div:nth-child(2)>div>div a {
+    margin-right: 15px;
+}
+
+header div:nth-child(2)>div>div a img {
+    filter: brightness(0) opacity(0.25);
+    transition: filter 0.3s;
+}
+
+header div:nth-child(2)>div>div a img:hover {
+    filter: brightness(1) opacity(1);
+}
+
+header button {
+    font-size: 1.25em;
+    padding: 20px 50px;
+    filter: drop-shadow(0px 10px 0px var(--primary-colour-dark));
+}
+
+header button:hover {
+    filter: drop-shadow(0px 0px 0px var(--primary-colour-dark));
+    transform: translateY(10px);
+}
+
+
+/* About section */
+#about {
+    margin-top: 38vh;
+}
+
+#about h2,
+#about p {
+    padding-left: 40px;
+}
+
+
+#about p {
+    position: relative;
+    margin: 10px 0 40px;
+}
+
+#about p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    border-radius: 40px;
+    background: var(--secondary-colour);
+}
+
+#about details>div p {
+    font-family: RubikBold;
+}
+
+#about details>div p::before {
+    display: none;
+}
+
+#about details {
+    padding: 0;
+    font-style: italic;
+}
+
+#about summary {
+    padding-left: 20px;
+}
+
+#about details>div {
+    display: grid;
+    grid-template-columns: 2fr minmax(200px, 1fr);
+    position: relative;
+    overflow: hidden;
+}
+
+#about details>div a {}
+
+summary::-webkit-details-marker {
+    opacity: 0.5;
+}
+
+
+#about details summary::after {
+    content: 'Read more...';
+}
+
+#about details[open] summary {
+    color: grey;
+}
+
+#about details[open] summary::after {
+    content: 'Read less';
+}
+
+
+/* Projects Section */
+#projects h2 {
+    text-align: center;
+    position: relative;
+}
+
+#projects h2:before,
+#projects h2:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 25px;
+    background: var(--tertiary-colour);
+    border-radius: 40px;
+}
+
+#projects h2:after {
+    margin-top: 15px;
+    right: -50%;
+}
+
+#projects h2:before {
+    margin-top: 15px;
+    left: -50%;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.prj-img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.prj-img img {
+    width: 100%;
+    /* min-width: 200px; */
+}
+
+.prj-img span {
+    position: relative;
+}
+
+.prj-img span::before {
+    content: '';
+    background: url('../img//project1-blob.svg') no-repeat;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    width: 45vmin;
+    height: 45vmin;
+    top: 10%;
+    left: -20%;
+    z-index: -1;
+}
+
+.prj-tech ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9em;
+}
+
+.prj-tech img {
+    width: 25px;
+    padding-right: 5px;
+}
+
+.prj-tech button {
+    color: #000;
+    background: #fff;
+    border-radius: 6px;
+    border: 2px solid #000;
+    filter: drop-shadow(0px 6.5px 0px #000);
+    padding: 10px;
+    justify-content: baseline;
+    margin-left: 20px;
+}
+
+.prj-tech button:hover {
+    filter: drop-shadow(0px 6.5px 0px #000);
+    transform: unset;
+}
+
+.prj-tech li:nth-child(1) button {
+    margin-left: 0;
+}
+
+
+.prj-content-ft span:last-child {
+    margin-left: 40px;
+}
+
+.prj-content-ft span p {
+    margin-left: 10px;
+}
+
+.prj-content-ft img {
+    filter: brightness(0);
 }

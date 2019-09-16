@@ -57,19 +57,19 @@
     <header class="gbl-space2">
         <div>
             <img src="./img/avatar.svg" alt="Abraham Dieudonne Ndinga">
+            <div></div>
         </div>
         <div>
             <h2>Hi, I'm</h2>
-            <h1>Abraham D Ndinga</h1>
-            <h2>Web Developer & Designer</h2>
+            <h1>Abraham Ndinga</h1>
+            <h2>Web Developer/ Designer</h2>
             <div>
                 <a href="#contact">
                     <button>
-                        Get in touch!
+                        Get in touch with me now!
                     </button>
                 </a>
-                <br>
-                <span>
+                <div>
                     <a href="https://github.com/AbrahamDN" target="_blank" rel="noopener noreferrer">
                         <img src="./img/github.svg" alt="GitHub">
                     </a>
@@ -82,13 +82,152 @@
                     <a href="https://www.instagram.com/iabraham.dn/" target="_blank" rel="noopener noreferrer">
                         <img src="./img/instagram.svg" alt="Instagram">
                     </a>
-                </span>
+                </div>
             </div>
         </div>
     </header>
 
 
+    <section id="about" class="gbl-space2">
+        <h2>Who am I? Here's abit about me</h2>
+        <div>
+            <p>
+                So, based in Manchester - I’m an aspiring web developer with lots of talents & potential, as you
+                continue or
+                as you
+                could already probably tell I’m big on design, one of my earliest talent is Art, so as an creative
+                and
+                enthusiastic web
+                developer you bet I take that talent to my UI designs.
+                <br><br>
+                Although I am primarily a web developer, I still produce impactful web UI designs that look
+                absolutely
+                stunning. If I’m
+                going to build a site I might as well make it look not just good but great, right?
+            </p>
+            <p>
+                As for languages, Am proficient in HTML, CSS & JavaScript, out of the free my favorite would have to
+                be
+                JavaScript as
+                you can just do so much with it, however I am strongest in CSS - since am so big on design I studied
+                the
+                “Ufft!” out of
+                it.
+                <br><br>
+                And, ay don’t worry I didn’t forget about the frameworks. Currently I’m working with React, but
+                before
+                that
+                I worked
+                with NodeJs, I still use NPM packages in my projects.
+            </p>
+            <details>
+                <summary>
+                    <!-- Read more... -->
+                </summary>
+                <div>
+                    <p>
+                        In conclusion, if your looking for a passionate developer, who can get the work done whilst
+                        also
+                        delivering high
+                        standard designs, look no further.
+                        <br><br>
+                        With my great eye for detail, object oriented programing habits, eye-pleasing UI designs and
+                        experience with
+                        cutting-edge technologies, adding me to the team is a no-brainer.
+                    </p>
+                    <span>
+                        <a href="#contact">
+                            <button>
+                                Get in touch now!
+                            </button>
+                        </a>
+                    </span>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section id="projects" class="gbl-space2">
+        <h2>Projects</h2>
+        <div class="projects">
+            <!-- Project 1 -->
+            <div class="project">
+                <div class="prj-img">
+                    <span>
+                        <img src="./img/project1-device.png" alt="project" loading="lazy">
+                    </span>
+                </div>
+                <div class="prj-content">
+                    <h3>TeliMine</h3>
+                    <br>
+                    <p>
+                        Built with React.js, TeliMine is a online phone store selling only the latest high-end mobile
+                        phones from the leading
+                        brands.
+                    </p>
+                    <ul>
+                        <li>eCommerce</li>,
+                        <li>PayPal checkout</li>
+                    </ul>
+                    <br>
+                    <div class="prj-tech">
+                        <ul>
+                            <li>
+                                <button>
+                                    <img src="./img/css.svg" alt="Language: ">
+                                    <span>CSS</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="./img/javascript.svg" alt="Language: ">
+                                    <span>JavaScript</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="./img/react.svg" alt="Framework: ">
+                                    <span>ReactJS</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="prj-content-ft">
+                        <span>
+                            <a href="https://telimine.abrahamdn.com" target="_blank" rel="noopener noreferrer">
+                                <img src="./img/eye.svg" alt="👁">
+                                <p>View site</p>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://github.com/AbrahamDN" target="_blank" rel="noopener noreferrer">
+                                <img src="./img/github.svg" alt="See the code in ">
+                                <p>Github</p>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Script -->
+    <script>
+        // Native (Image) Lazy Loading
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.1/lazysizes.min.js';
+            document.body.appendChild(script); e
+        }
+
+    </script>
     <script src="./js/index.js"></script>
 </body>
 
