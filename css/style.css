@@ -316,7 +316,7 @@ summary::-webkit-details-marker {
 #projects h2:after {
     content: '';
     position: absolute;
-    width: 50%;
+    width: 25%;
     height: 25px;
     background: var(--tertiary-colour);
     border-radius: 40px;
@@ -324,12 +324,14 @@ summary::-webkit-details-marker {
 
 #projects h2:after {
     margin-top: 15px;
-    right: -50%;
+    right: -18%;
+    border-radius: 40px 0 0 40px;
 }
 
 #projects h2:before {
     margin-top: 15px;
-    left: -50%;
+    left: -20%;
+    border-radius: 0 40px 40px 0;
 }
 
 .project {
